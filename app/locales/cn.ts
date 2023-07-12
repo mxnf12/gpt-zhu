@@ -4,7 +4,7 @@ const cn = {
   WIP: "维护不易，感谢支持",
   Error: {
     Unauthorized:
-      "## 🤖欢迎使用\n\**您还未授权，填入授权码后可永久使用本网址，\n\授权码用户可以无限制的免费使用GPT-3.5和[GPT-4联网版](https://gpt4.mxnf.one)**\n\### ⭐获取地址\n\**关注公众号领取免费授权码：[屌毛资本情报站](http://img.iswl.tk/123/xc4.jpg)\n\长期授权码/GPT手工账号：[购买地址](http://km.mxnf.one)**\n\###宣传大使\n\**将网站附带文案分享至朋友圈可领7天GPT-4[无限制提问](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=qCHvX658heZg-xyyHv27KwLVuT6KJjrp&authKey=p6a4eLNUUgtKGZGDmCyQDNew%2FWBzmO30dNMAVUjPnrU6XNirbFqwEHsi%2FfM%2FxuK9&noverify=0&group_code=854495421)**",
+      "## 🤖欢迎使用\n\**您还未授权，填入授权码后可永久使用本网址，\n\授权码用户可以无限制的免费使用GPT-3.5和[GPT-4联网版](https://gpt4.mxnf.one)**\n\### ⭐获取地址\n\**关注公众号领取免费授权码：[屌毛资本情报站](http://img.iswl.tk/123/xc4.jpg)\n\长期授权码/GPT手工账号：[购买地址](http://km.mxnf.one)\n\将网站附带文案分享至朋友圈可领7天GPT-4[无限制提问](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=qCHvX658heZg-xyyHv27KwLVuT6KJjrp&authKey=p6a4eLNUUgtKGZGDmCyQDNew%2FWBzmO30dNMAVUjPnrU6XNirbFqwEHsi%2FfM%2FxuK9&noverify=0&group_code=854495421)**",
   },
   Auth: {
     Title: "需要密码",
