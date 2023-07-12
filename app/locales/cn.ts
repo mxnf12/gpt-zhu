@@ -246,7 +246,7 @@ const cn = {
   },
   Store: {
     DefaultTopic: "新的聊天",
-    BotHello: "## 🤖欢迎使用\n\**近期，用户访问量激增，可能导致域名被污染、打不开情况。可进入官方[社群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=IVySclMptpOHK7cj5Es78LyjeSS6i2OQ&authKey=ne%2FxnDUEpr3lNWpxZW1rqrpisqIXRg7yAhZej4UkKLbGQdQfwQn%2BLBXfho6iPgkG&noverify=0&group_code=467599493)或下载[APP](https://wwat.lanzoul.com/b0rhs7cb)**\n\### ⭐特别说明\n\**免费体验[GPT-4联网版](https://gpt4.mxnf.one)\n\AI工具大全：[ai.mxnf.one](http://ai.mxnf.one)\n\最新地址发布页：[mxnf.tk](http://mxnf.one/app.html)**",
+    BotHello: "## 🤖欢迎使用\n\**近期，用户访问量激增，可能导致域名被污染、打不开情况。可进入官方[社群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=IVySclMptpOHK7cj5Es78LyjeSS6i2OQ&authKey=ne%2FxnDUEpr3lNWpxZW1rqrpisqIXRg7yAhZej4UkKLbGQdQfwQn%2BLBXfho6iPgkG&noverify=0&group_code=467599493)或下载[APP](https://wwat.lanzoul.com/b0rhs7cb)**\n\### ⭐特别说明\n\**\AI工具大全：[ai.mxnf.one](http://ai.mxnf.one)\n\最新地址发布页：[mxnf.tk](http://mxnf.one/app.html)**",
     Error: "出错了，稍后重试吧",
     Prompt: {
       History: (content: string) => "这是历史聊天总结作为前情提要：" + content,
