@@ -10,7 +10,7 @@ import AddIcon from "../icons/add.svg";
 import CloseIcon from "../icons/close.svg";
 import MaskIcon from "../icons/mask.svg";
 import PluginIcon from "../icons/plugin.svg";
-
+import NoticeIcon from "../icons/notice.svg";
 import Locale from "../locales";
 
 import { useAppConfig, useChatStore } from "../store";
@@ -179,6 +179,26 @@ export function SideBar(props: { className?: string }) {
               <IconButton icon={<SettingsIcon />} shadow />
             </Link>
           </div>
+
+
+
+  {props.noticeTitle || props.noticeContent ? (
+            <div className={styles["sidebar-action"]}>
+              <IconButton
+                icon={<NoticeIcon />}
+                onClick={() => {
+                  props.setNoticeShow(true);
+                }}
+                shadow
+              />
+            </div>
+          ) : (
+            <></>
+          )}
+
+
+
+          
           <div className={styles["sidebar-action"]}>
             <a href={REPO_URL} target="_blank">
               <IconButton icon={<GithubIcon />} shadow />
