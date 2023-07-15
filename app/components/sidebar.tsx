@@ -182,20 +182,6 @@ export function SideBar(props: { className?: string }) {
 
 
 
-  {props.noticeTitle || props.noticeContent ? (
-            <div className={styles["sidebar-action"]}>
-              <IconButton
-                icon={<NoticeIcon />}
-                onClick={() => {
-                  props.setNoticeShow(true);
-                }}
-                shadow
-              />
-            </div>
-          ) : (
-            <></>
-          )}
-
 
 
           
