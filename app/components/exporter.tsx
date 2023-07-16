@@ -448,7 +448,8 @@ export function ImagePreviewer(props: {
           <div>
             <div className={styles["main-title"]}>GPT Pro</div>
             <div className={styles["sub-title"]}>
-              github.com/Yidadaa/ChatGPT-Next-Web\n\ChatGPT网站：chat.mxnf.one
+              github.com/Yidadaa/ChatGPT-Next-Web
+              ChatGPT网站：chat.mxnf.one
             </div>
             <div className={styles["icons"]}>
               <ExportAvatar avatar={config.avatar} />
