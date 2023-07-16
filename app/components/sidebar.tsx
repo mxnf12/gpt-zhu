@@ -183,6 +183,21 @@ export function SideBar(props: { className?: string }) {
 
 
 
+  <div className={styles["sidebar-action"]}>
+    <IconButton
+      icon={<NoticeIcon />}
+      shadow
+      onClick={() => {
+        // 在这里处理弹窗公告的逻辑
+        // 可以使用弹窗库或自定义弹窗组件来实现
+        // 例如：显示一个模态框或弹出一个通知提示
+        // 可以使用状态管理或上下文来控制弹窗的显示与隐藏
+      }}
+    />
+  </div>
+</div>
+
+
 
           
           <div className={styles["sidebar-action"]}>
