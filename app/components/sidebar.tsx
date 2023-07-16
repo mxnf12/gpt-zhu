@@ -1,6 +1,20 @@
 import { useEffect, useRef } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import dynamic from "next/dynamic";
+import { showConfirm, showToast } from "./ui-lib";
+import { useState } from 'react';
 
 import styles from "./home.module.scss";
+import Locale from "../locales";
+import {
+  MAX_SIDEBAR_WIDTH,
+  MIN_SIDEBAR_WIDTH,
+  NARROW_SIDEBAR_WIDTH,
+  Path,
+  REPO_URL,
+} from "../constant";
+import { useAppConfig, useChatStore } from "../store";
+import { useMobileScreen } from "../utils";
 
 import { IconButton } from "./button";
 import SettingsIcon from "../icons/settings.svg";
@@ -11,22 +25,6 @@ import CloseIcon from "../icons/close.svg";
 import MaskIcon from "../icons/mask.svg";
 import PluginIcon from "../icons/plugin.svg";
 import NoticeIcon from "../icons/notice.svg";
-import Locale from "../locales";
-
-import { useAppConfig, useChatStore } from "../store";
-
-import {
-  MAX_SIDEBAR_WIDTH,
-  MIN_SIDEBAR_WIDTH,
-  NARROW_SIDEBAR_WIDTH,
-  Path,
-  REPO_URL,
-} from "../constant";
-
-import { Link, useNavigate } from "react-router-dom";
-import { useMobileScreen } from "../utils";
-import dynamic from "next/dynamic";
-import { showConfirm, showToast } from "./ui-lib";
 
 const ChatList = dynamic(async () => (await import("./chat-list")).ChatList, {
   loading: () => null,
@@ -48,7 +46,7 @@ function useHotKey() {
 
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  });
+  }, [chatStore]);
 }
 
 function useDragSideBar() {
@@ -99,7 +97,7 @@ function useDragSideBar() {
   };
 }
 
-export function SideBar(props: { className?: string }) {
+function SideBar(props: { className?: string }) {
   const chatStore = useChatStore();
 
   // drag side bar
@@ -135,21 +133,20 @@ export function SideBar(props: { className?: string }) {
           onClick={() => navigate(Path.NewChat, { state: { fromHome: true } })}
           shadow
         />
-         <IconButton
-         icon={<PluginIcon />}
-  text={shouldNarrow ? undefined : Locale.Plugin.Name}
-  className={styles["sidebar-bar-button"]}
-  onClick={() => {
-    // 显示提示消息
-    showToast(Locale.WIP);
+        <IconButton
+          icon={<PluginIcon />}
+          text={shouldNarrow ? undefined : Locale.Plugin.Name}
+          className={styles["sidebar-bar-button"]}
+          onClick={() => {
+            // 显示提示消息
+            showToast(Locale.WIP);
 
-    // 跳转到百度
-    window.location.href = "http://img.iswl.tk/123/xc.html";
-  }}
-  shadow
-/>
+            // 跳转到百度
+            window.location.href = "http://img.iswl.tk/123/xc.html";
+          }}
+          shadow
+        />
       </div>
-
 
       <div
         className={styles["sidebar-body"]}
@@ -179,38 +176,6 @@ export function SideBar(props: { className?: string }) {
               <IconButton icon={<SettingsIcon />} shadow />
             </Link>
           </div>
-
-
-import { useState } from 'react';
-
-function ComponentName() {
-  const [noticeShow, setNoticeShow] = useState(false);
-
-  const handleButtonClick = () => {
-    setNoticeShow(true);
-  };
-
-  return (
-    <div>
-      <IconButton
-        icon={<NoticeIcon />}
-        onClick={handleButtonClick}
-        shadow
-      />
-      {noticeShow && (
-        <div>
-          {/* 公告框的内容 */}
-        </div>
-      )}
-    </div>
-  );
-}
-
-export default ComponentName;
-
-
-
-          
           <div className={styles["sidebar-action"]}>
             <a href={REPO_URL} target="_blank">
               <IconButton icon={<GithubIcon />} shadow />
@@ -241,3 +206,28 @@ export default ComponentName;
     </div>
   );
 }
+
+function ComponentName() {
+  const [noticeShow, setNoticeShow] = useState(false);
+
+  const handleButtonClick = () => {
+    setNoticeShow(true);
+  };
+
+  return (
+    <div>
+      <IconButton
+        icon={<NoticeIcon />}
+        onClick={handleButtonClick}
+        shadow
+      />
+      {noticeShow && (
+        <div>
+          {/* 公告框的内容 */}
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default ComponentName;
