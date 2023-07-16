@@ -181,6 +181,32 @@ export function SideBar(props: { className?: string }) {
           </div>
 
 
+import { useState } from 'react';
+
+function ComponentName() {
+  const [noticeShow, setNoticeShow] = useState(false);
+
+  const handleButtonClick = () => {
+    setNoticeShow(true);
+  };
+
+  return (
+    <div>
+      <IconButton
+        icon={<NoticeIcon />}
+        onClick={handleButtonClick}
+        shadow
+      />
+      {noticeShow && (
+        <div>
+          {/* 公告框的内容 */}
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default ComponentName;
 
 
 
