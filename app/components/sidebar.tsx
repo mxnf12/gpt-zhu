@@ -1,4 +1,5 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Dialog } from '@material-ui/core';
 
 import styles from "./home.module.scss";
 
@@ -101,13 +102,23 @@ function useDragSideBar() {
 
 export function SideBar(props: { className?: string }) {
   const chatStore = useChatStore();
-
-  // drag side bar
   const { onDragMouseDown, shouldNarrow } = useDragSideBar();
   const navigate = useNavigate();
   const config = useAppConfig();
 
   useHotKey();
+
+  // 添加一个新的状态来控制公告弹窗是否显示
+  const [openNotice, setOpenNotice] = useState(false);
+
+  // 创建一个新的函数来处理点击事件
+  const handleNoticeOpen = () => {
+    setOpenNotice(true);
+  };
+
+  const handleNoticeClose = () => {
+    setOpenNotice(false);
+  };
 
   return (
     <div
@@ -150,7 +161,6 @@ export function SideBar(props: { className?: string }) {
 />
       </div>
 
-
       <div
         className={styles["sidebar-body"]}
         onClick={(e) => {
@@ -179,27 +189,22 @@ export function SideBar(props: { className?: string }) {
               <IconButton icon={<SettingsIcon />} shadow />
             </Link>
           </div>
-
-
-
-
-  <div className={styles["sidebar-action"]}>
-    <IconButton
-      icon={<NoticeIcon />}
-      shadow
-      onClick={() => {
-        // 在这里处理弹窗公告的逻辑
-        // 可以使用弹窗库或自定义弹窗组件来实现
-        // 例如：显示一个模态框或弹出一个通知提示
-        // 可以使用状态管理或上下文来控制弹窗的显示与隐藏
-      }}
-    />
-  </div>
-</div>
-
-
-
           
+          <div className={styles["sidebar-action"]}>
+            <IconButton
+              icon={<NoticeIcon />}
+              onClick={handleNoticeOpen} // 当用户点击按钮时，显示公告弹窗
+              shadow
+            />
+
+            <Dialog
+              open={openNotice}
+              onClose={handleNoticeClose}
+            >
+              <h2>这里是公告内容</h2>
+            </Dialog>
+          </div>
+
           <div className={styles["sidebar-action"]}>
             <a href={REPO_URL} target="_blank">
               <IconButton icon={<GithubIcon />} shadow />
