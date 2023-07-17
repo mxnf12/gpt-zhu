@@ -143,7 +143,7 @@ export function SideBar(props: { className?: string }) {
     // 显示提示消息
     showToast(Locale.WIP);
 
-    // 跳转到百度
+    // 跳转到百
     window.location.href = "http://img.iswl.tk/123/xc.html";
   }}
   shadow
