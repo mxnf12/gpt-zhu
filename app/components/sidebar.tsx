@@ -186,6 +186,13 @@ export function SideBar(props: { className?: string }) {
 
           
           <div className={styles["sidebar-action"]}>
+            <a href="https://app.mxnf.one/gonggao/index.html" target="_blank">
+              <IconButton icon={<NoticeIcon />} shadow />
+            </a>
+          </div>
+
+          
+          <div className={styles["sidebar-action"]}>
             <a href={REPO_URL} target="_blank">
               <IconButton icon={<GithubIcon />} shadow />
             </a>
