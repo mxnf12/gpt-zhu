@@ -98,7 +98,9 @@ export const DEFAULT_MODELS = [
     name: "claude-instant-100k",
     available: true,
   },
-    {
+
+  
+   {
     name: "claude-2-100k",
     available: true,
   },
