@@ -99,9 +99,6 @@ export const DEFAULT_MODELS = [
     available: true,
   },
 
-  
-   
-  },
  
   {
     name: "chatglm", // chatglm-6b
