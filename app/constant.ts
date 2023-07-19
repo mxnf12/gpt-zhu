@@ -96,7 +96,7 @@ export const DEFAULT_MODELS = [
  
  
   {
-    name: "chatglm", // chatglm-6b
-    available: false,
+    name: "claude-2-100k", // chatglm-6b
+    available: true,
   },
 ] as const;
