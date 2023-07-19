@@ -100,9 +100,7 @@ export const DEFAULT_MODELS = [
   },
 
   
-   {
-    name: "claude-2-100k",
-    available: true,
+   
   },
  
   {
