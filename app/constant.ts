@@ -82,10 +82,6 @@ export const DEFAULT_MODELS = [
   },
  
   {
-    name: "gpt-3.5-turbo-0613",
-    available: true,
-  },
-  {
     name: "gpt-3.5-turbo-16k",
     available: true,
   },
@@ -103,8 +99,5 @@ export const DEFAULT_MODELS = [
     available: true,
   },
  
-  {
-    name: "chatglm", // chatglm-6b
-    available: false,
-  },
+  
 ] as const;
