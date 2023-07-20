@@ -10,9 +10,10 @@ export async function requestOpenai(req: NextRequest) {
   const controller = new AbortController();
   const authValue = req.headers.get("Authorization") ?? "";
   const openaiPath = `${req.nextUrl.pathname}${req.nextUrl.search}`.replaceAll(
-    "/api/openai/",
-    "",
-  );
+  "/api/openai/",
+  baseUrl,
+);
+
 
   let baseUrl = BASE_URL;
 
