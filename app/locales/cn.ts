@@ -219,8 +219,8 @@ const cn = {
       Placeholder: "请输入授权码",
     },
     Endpoint: {
-      Title: "接口地址",
-      SubTitle: "除默认地址外，必须包含 http(s)://",
+      Title: "中站地址",
+      SubTitle: "此处不要动，否则无法使用",
     },
     Model: "模型 (model)",
     Temperature: {
