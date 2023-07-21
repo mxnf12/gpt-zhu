@@ -13,7 +13,6 @@ export async function requestOpenai(req: NextRequest) {
   "/api/openai",
   "",
 );
-);
 
   let baseUrl = BASE_URL;
 
