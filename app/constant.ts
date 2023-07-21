@@ -11,7 +11,7 @@ export const FETCH_COMMIT_URL = `http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=5aCYp
 export const FETCH_TAG_URL = `http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=5aCYpdHPbj2y7Y37utr8sNzS8Vv2RHrf&authKey=HaaXnUtMpG3vvZ6rFupPDjDXEdKrU5LMyLGhtBfVF%2BtYVU2a%2FtRNPYXZvMTXMARo&noverify=0&group_code=854495421
 `;
 export const RUNTIME_CONFIG_DOM = "danger-runtime-config";
-export const DEFAULT_API_HOST = "https://api.mxnf.one";
+export const DEFAULT_API_HOST = "https://chatgpt1.nextweb.fun/api/proxy";
 
 export enum Path {
   Home = "/",
